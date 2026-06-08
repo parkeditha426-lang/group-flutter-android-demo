@@ -13,7 +13,8 @@ class GroupFlutterAndroidApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: '小组 Android 真机运行展示',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
+        // [组员E] 自定义主题色：深蓝紫 indigo
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF5C6BC0)),
         useMaterial3: true,
       ),
       home: const TeamAndroidHomePage(),
@@ -62,6 +63,11 @@ class TeamAndroidHomePage extends StatelessWidget {
     '照片需发到小组，并加入 GitHub README。',
   ];
 
+  // ====== [组员E 新增] 小组联系方式 ======
+  static const String contactTitle = '小组联系方式';
+  static const String contactDesc = '欢迎扫码加入微信群，获取实时协作动态与资料共享。';
+  static const String wechatGroupName = '移动应用软件开发实训';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,6 +82,9 @@ class TeamAndroidHomePage extends StatelessWidget {
           AndroidTasksSection(),
           SizedBox(height: 20),
           EvidenceSection(),
+          SizedBox(height: 20),
+          // ====== [组员E 新增] 联系方式板块 ======
+          ContactSection(),
         ],
       ),
     );
@@ -180,6 +189,75 @@ class EvidenceSection extends StatelessWidget {
             const Text('真机照片证据要求', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
             ...TeamAndroidHomePage.evidenceNotes.map((note) => Text('• $note')),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// ====== [组员E 新增] 联系方式板块 Widget ======
+class ContactSection extends StatelessWidget {
+  const ContactSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return Card(
+      color: colorScheme.tertiaryContainer,
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.group, color: colorScheme.tertiary),
+                const SizedBox(width: 8),
+                Text(
+                  TeamAndroidHomePage.contactTitle,
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    color: colorScheme.onTertiaryContainer,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 8),
+            Text(
+              TeamAndroidHomePage.contactDesc,
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 14, color: colorScheme.onTertiaryContainer),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              '「${TeamAndroidHomePage.wechatGroupName}」',
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+                color: colorScheme.tertiary,
+              ),
+            ),
+            const SizedBox(height: 12),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.asset(
+                'images/wechat_qr.jpg',
+                width: 200,
+                height: 200,
+                fit: BoxFit.contain,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              '扫码加入微信群',
+              style: TextStyle(
+                fontSize: 12,
+                color: colorScheme.onTertiaryContainer.withOpacity(0.7),
+              ),
+            ),
           ],
         ),
       ),
