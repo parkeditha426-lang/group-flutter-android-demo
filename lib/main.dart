@@ -24,8 +24,8 @@ class GroupFlutterAndroidApp extends StatelessWidget {
 class TeamAndroidHomePage extends StatelessWidget {
   const TeamAndroidHomePage({super.key});
 
-  static const String projectTitle = '星火小组 Android 真机运行展示';
-  static const String projectSlogan = '用 GitHub 协作完成一次 Flutter 应用真机运行';
+  static const String projectTitle = 'Flutter Android 真机运行演示';
+  static const String projectSlogan = '通过 Fork 仓库和 Pull Request 协作，完成 Flutter 应用在 Android 真机上的运行。';
   static const String deviceProof = '最终证据：用第二部手机拍摄手持 Android 真机运行照片，并加入 GitHub README。';
 
   static const List<TeamMember> members = [
