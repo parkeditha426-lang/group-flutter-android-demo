@@ -6,8 +6,7 @@ void main() {
   testWidgets('group Flutter Android demo renders main sections', (tester) async {
     await tester.pumpWidget(const GroupFlutterAndroidApp());
 
-    expect(find.text('Android 真机运行展示'), findsOneWidget);
-    expect(find.text('星火小组 Android 真机运行展示'), findsOneWidget);
+    expect(find.text('Flutter Android 真机运行演示'), findsOneWidget);
     expect(find.text('小组成员与分工'), findsOneWidget);
 
     await tester.drag(find.byType(ListView), const Offset(0, -500));
