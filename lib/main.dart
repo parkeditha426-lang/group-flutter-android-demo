@@ -39,12 +39,20 @@ class TeamAndroidHomePage extends StatelessWidget {
   ];
 
   static const List<String> androidTasks = [
-    '选择一台主运行电脑和一台 Android 手机',
-    '使用教师下载页或组内互拷准备 Flutter / Android 工具',
-    '打开手机开发者选项与 USB 调试',
-    '使用 adb devices 确认设备状态为 device',
-    '使用 flutter doctor 和 flutter devices 检查环境',
-    '使用 flutter run 在真实手机上运行应用',
+    '确认主电脑已安装 Flutter SDK 和 Android Studio',
+    '确认项目路径为英文短路径，如 C:\\dev\\group_flutter_android_demo',
+    '配置 FLUTTER_STORAGE_BASE_URL 和 PUB_HOSTED_URL 国内镜像',
+    '运行 flutter doctor -v 检查开发环境是否完整',
+    '通过 Android Studio SDK Manager 安装 SDK Platform、Build-Tools、Platform-Tools',
+    '运行 flutter doctor --android-licenses 接受所有许可',
+    '打开 Android 手机开发者选项与 USB 调试',
+    '用数据线连接手机，选择文件传输 / MTP 模式',
+    '手机弹出授权时点击允许 USB 调试',
+    '运行 adb devices 确认设备状态为 device',
+    '运行 flutter devices 确认 Flutter 识别到设备',
+    '进入项目目录运行 flutter pub get 下载依赖',
+    '运行 flutter test 确认测试通过',
+    '运行 flutter run 在真实 Android 手机上启动应用',
   ];
 
   static const List<String> evidenceNotes = [
