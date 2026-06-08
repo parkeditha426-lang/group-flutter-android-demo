@@ -56,10 +56,11 @@ class TeamAndroidHomePage extends StatelessWidget {
   ];
 
   static const List<String> evidenceNotes = [
-    '不能提交 Web 截图或模拟器截图。',
-    '不能使用手机直接截图代替照片。',
-    '必须用第二部手机拍摄，并拍到手持真机。',
-    '照片需发到小组，并加入 GitHub README。',
+    '证据照片必须展示真实 Android 手机正在运行本 Flutter 应用。',
+    '照片需要由第二部手机拍摄，并拍到手持真机，不能用手机截图代替。',
+    '不能提交 Web 页面截图、模拟器截图或电脑屏幕截图作为真机证据。',
+    '照片建议保存为 images/android-real-device.jpg，并在 README 中使用相同路径引用。',
+    '提交前检查照片中不要出现账号、手机号、聊天记录等明显隐私信息。',
   ];
 
   @override
