@@ -84,11 +84,13 @@ device
 
 | 角色 | 修改位置 | 任务 |
 | --- | --- | --- |
-| 组长 | GitHub 仓库 | 创建仓库、维护 main、审核 PR、组织真机运行 |
-| 组员 A | `lib/main.dart` | 修改 `projectTitle` 和 `projectSlogan` |
-| 组员 B | `lib/main.dart` | 修改 `members` 中的小组成员姓名和分工 |
-| 组员 C | `lib/main.dart` | 修改 `androidTasks` 中的真机运行任务 |
-| 组员 D | `lib/main.dart` 和 `README.md` | 修改 `evidenceNotes`，补充 README 真机照片说明 |
+| 组长 | 仓库管理，不需要修改代码 | 创建原始仓库，审核并合并 PR，组织最终真机运行和提交，提供主 Android 手机 |
+| 组员 A | `projectTitle` / `projectSlogan` | 修改应用标题和项目口号 |
+| 组员 B | `members` 列表 | 修改成员信息和分工 |
+| 组员 C | `androidTasks` 列表 | 修改真机运行任务列表 |
+| 组员 D | `evidenceNotes` + `README.md` | 修改证据说明和 README 照片说明 |
+| 组员 E | `extraInfo` 或新增自定义字段 | 添加小组联系方式、主题色、页面风格等自定义内容 |
+| 组员 F | `images/` 目录 + `README.md` 图片区域 | 用第二部手机拍摄真机运行照片，整理图片并提交到 `images/`，更新 README 图片区域 |
 
 ## Android 真机运行效果
 
@@ -104,7 +106,9 @@ images/android-real-device.jpg
 ![Android 真机运行照片](images/android-real-device.jpg)
 ```
 
-照片必须满足：
+### 真机照片证据说明
+
+本部分由组员 D 负责补充说明，组员 F 负责拍摄并提交实际图片。照片必须满足：
 
 - 真实 Android 手机正在运行本 Flutter 应用。
 - 不能是 Web 截图。
@@ -112,6 +116,9 @@ images/android-real-device.jpg
 - 必须由第二部手机拍摄。
 - 必须拍到手持手机。
 - 不能包含明显隐私信息。
+- 图片文件建议命名为 `android-real-device.jpg`，并放在 `images/` 目录下。
+- README 中的图片路径必须写成 `images/android-real-device.jpg`，大小写需要和文件名完全一致。
+- 如果图片较大，建议压缩到 2MB 到 5MB 左右后再提交。
 
 提交照片后，下面应显示本组真机运行效果：
 
