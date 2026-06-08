@@ -98,12 +98,21 @@ device
 
 ```text
 images/android-real-device.jpg
+images/android-real-device-1.jpg
+images/android-real-device-2.jpg
+images/android-real-device-3.jpg
+images/android-real-device-4.jpg
+images/android-real-device-5.jpg
 ```
 
 然后在 README 中引用：
 
 ```markdown
-![Android 真机运行照片](images/android-real-device.jpg)
+![Android 真机运行照片 1](images/android-real-device-1.jpg)
+![Android 真机运行照片 2](images/android-real-device-2.jpg)
+![Android 真机运行照片 3](images/android-real-device-3.jpg)
+![Android 真机运行照片 4](images/android-real-device-4.jpg)
+![Android 真机运行照片 5](images/android-real-device-5.jpg)
 ```
 
 ### 真机照片证据说明
@@ -122,6 +131,10 @@ images/android-real-device.jpg
 
 提交照片后，下面应显示本组真机运行效果：
 
-![Android 真机运行照片](images/android-real-device.jpg)
+![Android 真机运行照片 1](images/android-real-device-1.jpg)
+![Android 真机运行照片 2](images/android-real-device-2.jpg)
+![Android 真机运行照片 3](images/android-real-device-3.jpg)
+![Android 真机运行照片 4](images/android-real-device-4.jpg)
+![Android 真机运行照片 5](images/android-real-device-5.jpg)
 
-如果这里暂时显示不出图片，说明还没有提交 `images/android-real-device.jpg`，或 README 路径需要检查。
+如果这里暂时显示不出图片，说明还没有提交照片文件，或 README 路径需要检查。
